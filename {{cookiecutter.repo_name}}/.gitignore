@@ -45,3 +45,7 @@ docs/_build/*
 
 # SQLite databases
 *.sqlite3
+
+# Static files
+static/*
+!static/.keep

@@ -126,6 +126,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.6/howto/static-files/
 if environ.get('STATIC_ROOT'):
     STATIC_ROOT = environ['STATIC_ROOT']
+else:
+    STATIC_ROOT = 'static'
 STATIC_URL = '/static/'
 
 

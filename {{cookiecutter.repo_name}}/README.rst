@@ -7,25 +7,25 @@
 .. raw:: html
 
     <p style="height:22px">
-      <a href="https://travis-ci.org/jwhitlock/drf-cached-instances">
-        <img src="https://travis-ci.org/jwhitlock/drf-cached-instances.png?branch=master"
+      <a href="https://travis-ci.org/{{cookiecutter.github_username}}/{{cookiecutter.repo_name}}">
+        <img src="https://travis-ci.org/{{cookiecutter.github_username}}/{{cookiecutter.repo_name}}.png?branch=master"
              alt="The status of Travis continuous integration tests">
       </a>
-      <a href="https://coveralls.io/r/jwhitlock/drf-cached-instances?branch=master">
-        <img src="https://coveralls.io/repos/jwhitlock/drf-cached-instances/badge.png?branch=master"
+      <a href="https://coveralls.io/r/{{cookiecutter.github_username}}/{{cookiecutter.repo_name}}?branch=master">
+        <img src="https://coveralls.io/repos/{{cookiecutter.github_username}}/{{cookiecutter.repo_name}}/badge.png?branch=master"
              alt="The code coverage">
       </a>
-      <a href="http://badge.fury.io/py/drf-cached-instances">
-        <img src="https://badge.fury.io/py/drf-cached-instances.png"
+      <a href="http://badge.fury.io/py/{{cookiecutter.repo_name}}">
+        <img src="https://badge.fury.io/py/{{cookiecutter.repo_name}}.png"
              alt="The PyPI package">
       </a>
-      <a href="https://pypi.python.org/pypi/drf-cached-instances">
-        <img src="https://pypip.in/d/drf-cached-instances/badge.png"
+      <a href="https://pypi.python.org/pypi/{{cookiecutter.repo_name}}">
+        <img src="https://pypip.in/d/{{cookiecutter.repo_name}}/badge.png"
              alt="PyPI download statistics">
       </a>
     </p>
     <p style="height:35px">
-      <a href="https://heroku.com/deploy?template=https://github.com/jwhitlock/drf-cached-instances">
+      <a href="https://heroku.com/deploy?template=https://github.com/{{cookiecutter.github_username}}/{{cookiecutter.repo_name}}">
         <img src="https://www.herokucdn.com/deploy/button.png"
              alt="Deploy to Heroku">
       </a>

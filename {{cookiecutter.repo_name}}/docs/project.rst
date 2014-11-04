@@ -6,7 +6,7 @@ a process like this:
 .. code-block:: sh
 
     $ cd ~/src/
-    $ cookiecutter gh:jwhitlock/cookiecutter-django-jw
+    $ cookiecutter https://github.com/jwhitlock/cookiecutter-django-jw.git
     config_path is ~/.cookiecutterrc
     full_name (default is "John Whitlock")? {{ cookiecutter.full_name }}
     email (default is "john@factorialfive.com")? {{cookiecutter.email }}
@@ -39,23 +39,25 @@ a process like this:
     Installing setuptools, pip...done.
     $ pip install -r requirements.txt
      (development requirements installed)
+    $ ./manage.py migrate
 
 Development Features
 --------------------
 After a basic install, you can run:
 
-* `make qa` - runs flake8 for PEP8 and PEP257 compliance checking.  Runs
+* ``make qa`` - runs flake8 for PEP8 and PEP257 compliance checking.  Runs
   coverage to confirm 100% code coverage for the app.
-* `make install_jslint` - Install node and jslint in the virtualenv.  Future
-  runs of `make qa` will include jslint checking of project javascript.
-* `make qa-all` - All the checks of `make qa`, plus building documentation,
+* ``make install_jslint`` - Install node and jslint in the virtualenv.  Future
+  runs of ``make qa`` will include jslint checking of project javascript.
+* ``make qa-all`` - All the checks of ``make qa``, plus building documentation,
   building and checking packaging, and running tox against a range of Python
   Django versions.
-* `./manage.py test` - Run tests with the nose test runner
-* `./manage.py test --failed --ipdb --ipdb-failures` - Run tests.  Keep track
+* ``make`` - See other make targets.
+* ``./manage.py test`` - Run tests with the nose test runner
+* ``./manage.py test --failed --ipdb --ipdb-failures`` - Run tests.  Keep track
   of which tests failed, and only run those in the future.  When an issue
   appears, debug in an interactive ipdb session.
-* `DEBUG=1 ./manage.py runserver_plus` - Run in debug mode.  Includes Django
+* ``DEBUG=1 ./manage.py runserver_plus`` - Run in debug mode.  Includes Django
   Debug Toolbar for peeking behind the scenes, and interactive tracebacks on
   failures.
 
@@ -68,11 +70,11 @@ to match your desired configuration.
 
 In development, some ways to set the environment are:
 
-* On the command line: `DEBUG-1 ./manage.py runserver`
-* Export settings: `export DEBUG=1; ./manage.py runserver`
-* As part of virtualenv initialization: `vim $VIRTUAL_ENV/bin/postactivate`
-  for the `export DEBUG=1` set statements, and
-  `vim $VIRTUAL_ENV/bin/predeactivate` for the `export DEBUG=` clear
+* On the command line: ``DEBUG-1 ./manage.py runserver``
+* Export settings: ``export DEBUG=1; ./manage.py runserver``
+* As part of virtualenv initialization: ``vim $VIRTUAL_ENV/bin/postactivate``
+  for the ``export DEBUG=1`` set statements, and
+  ``vim $VIRTUAL_ENV/bin/predeactivate`` for the ``export DEBUG=`` clear
   statements.
 
 Heroku deployment is included.  This can be done with the 'Deploy to Heroku'
@@ -84,14 +86,20 @@ button, or manually:
     $ heroku apps:create {{ cookiecutter.repo_name }}
     $ git push heroku master
 
-A good starting config for development is:
+The minimum config for running in heroku is:
+
+.. code-block:: sh
+
+    $ heroku config:set EXTRA_INSTALLED_APPS=gunicorn STATIC_ROOT=static
+
+
+For development, you'll want to enable debug:
 
 .. code-block:: sh
 
     $ heroku config:set DEBUG=1
-    $ heroku config:set EXTRA_INSTALLED_APPS=gunicorn
 
-A good starting config for release is:
+For release, more is useful:
 
 .. code-block:: sh
 
@@ -100,6 +108,11 @@ A good starting config for release is:
     $ heroku config:set ALLOWED_HOSTS={{ cookiecutter.repo_name }}.herokuapp.com
     $ heroku config:set SECURE_PROXY_SSL_HEADER=HTTP_X_FORWARDED_PROTOCOL,https
 
+When you've got the app configured, you can open it in the browser with:
+
+.. code-block:: sh
+
+    $ heroku open
 
 .. _12factor: http://12factor.net
 
