@@ -25,7 +25,7 @@ $ heroku config:set DJANGO_DEBUG=1
 Environment variables:
 ALLOWED_HOSTS - comma-separated list of allowed hosts
 DATABASE_URL - See https://github.com/kennethreitz/dj-database-url
-DJANGO_DEBUG - 1 to enable, 0 to disable, default disabled
+DEBUG - 1 to enable, 0 to disable, default disabled
 EXTRA_INSTALLED_APPS - comma-separated list of apps to add to INSTALLED_APPS
 SECRET_KEY - Overrides SECRET_KEY
 SECURE_PROXY_SSL_HEADER - "HTTP_X_FORWARDED_PROTOCOL,https" to enable
@@ -58,7 +58,7 @@ SECRET_KEY = environ.get(
     'SECRET_KEY', 'THIS_IS_A_SUPER_BAD_SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = environ.get("DJANGO_DEBUG", '0') in (1, '1')
+DEBUG = environ.get("DEBUG", '0') in (1, '1')
 TEMPLATE_DEBUG = DEBUG
 
 ALLOWED_HOSTS = environ.get('ALLOWED_HOSTS', '').split(',')

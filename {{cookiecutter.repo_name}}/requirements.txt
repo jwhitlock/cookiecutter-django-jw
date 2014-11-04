@@ -53,9 +53,29 @@ virtualenv==1.11.6
 py==1.4.26
 tox==1.8.1
 
+# Better interactive debugging
+gnureadline==6.3.3
+ipython==2.3.0
+ipdb==0.8
+ipdbplugin==1.4.1
+
+# Production quality serving of static files
+static3==0.5.1
+dj-static==0.0.6
+
+# ./manage.py runserveR_plus for better tracebacks
+Werkzeug==0.9.6
+
+# Django debug toolbar
+sqlparse==0.1.13
+django-debug-toolbar==1.2.2
+
 #
 # Requirements for Heroku
 #
 
 # WSGI runner
 gunicorn==19.1.1
+
+# PostgreSQL driver
+psycopg2==2.5.4
