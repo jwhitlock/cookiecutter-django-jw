@@ -56,7 +56,7 @@ setup(
         'Programming Language :: Python :: 3.3',
         'Programming Language :: Python :: 3.4',
     ],
-    test_suite='{{ cookiecutter.proj_name }}.runtests.runtests',
+    test_suite='{{ cookiecutter.site_name }}.runtests.runtests',
     tests_require=test_requirements
 )
 

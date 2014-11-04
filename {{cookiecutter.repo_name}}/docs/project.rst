@@ -14,7 +14,7 @@ a process like this:
     repo_name (default is "boilerplate")? {{cookiecutter.repo_name}}
     project_name (default is "Python Boilerplate")? {{ cookiecutter.project_name }}
     app_name (default is "boilerplate")? {{ cookiecutter.app_name }}
-    proj_name (default is "bpsite")? {{ cookiecutter.proj_name }}
+    site_name (default is "bpsite")? {{ cookiecutter.site_name }}
     project_short_description (default is "Python Boilerplate contains all the boilerplate you need to create a Python package.")? {{ cookiecutter.project_short_description}}
     release_date (default is "2015-01-11")? {{ cookiecutter.release_date }}
     year (default is "2014")? {{ cookiecutter.year }}
@@ -63,7 +63,7 @@ After a basic install, you can run:
 
 Deployment Features
 -------------------
-{{ cookiecutter.proj_name }}/settings.py is built using the 12factor_
+{{ cookiecutter.site_name }}/settings.py is built using the 12factor_
 principle of getting configuration from the environment.  The default
 configuration is release mode.  You'll need to set environment variables
 to match your desired configuration.

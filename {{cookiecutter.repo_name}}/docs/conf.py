@@ -19,7 +19,7 @@ import os
 cwd = os.getcwd()
 parent = os.path.dirname(cwd)
 sys.path.append(parent)
-os.environ.setdefault("DJANGO_SETTINGS_MODULE", "{{ cookiecutter.proj_name }}.settings")
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "{{ cookiecutter.site_name }}.settings")
 
 from {{ cookiecutter.app_name }} import __version__
 

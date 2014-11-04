@@ -10,7 +10,7 @@ import os
 import sys
 
 # Setup path to Django settings
-os.environ['DJANGO_SETTINGS_MODULE'] = '{{ cookiecutter.proj_name }}.settings'
+os.environ['DJANGO_SETTINGS_MODULE'] = '{{ cookiecutter.site_name }}.settings'
 
 # Add project folder to sys.path
 full_path = os.path.abspath(__file__)

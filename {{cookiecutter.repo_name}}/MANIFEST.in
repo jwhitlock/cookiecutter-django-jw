@@ -16,7 +16,7 @@ recursive-include {{ cookiecutter.app_name }} *.py
 recursive-include {{ cookiecutter.app_name }}/static *.css *.map *.eot *.svg *.ttf *.woff *.js .keep
 recursive-include {{ cookiecutter.app_name }}/templates *.jinja2
 recursive-include {{ cookiecutter.app_name }}/tests *.py
-recursive-include {{ cookiecutter.proj_name }} *.py
+recursive-include {{ cookiecutter.site_name }} *.py
 
 recursice-exclude * *.py[co]
 recursive-exclude * __pycache__
