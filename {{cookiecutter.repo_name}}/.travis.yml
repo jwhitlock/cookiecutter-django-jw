@@ -9,8 +9,6 @@ python:
   - "2.6"
   - "pypy"
 
-# command to install dependencies, e.g. pip install -r requirements.txt --use-mirrors
-install: pip install -r requirements.txt
-
-# command to run tests, e.g. python setup.py test
-script: python setup.py test
+install: pip install -r requirements.txt coveralls
+script: python manage.py test --with-coverage --cover-package={{ cookiecutter.app_name }}
+after_success: coveralls

@@ -1,0 +1,18 @@
+{{ "{%" }} extends "{{cookiecutter.app_name}}/base.jinja2" {{ "%}" }}
+
+{{ "{%" }} block head_title {{ "%}" }}{{cookiecutter.project_name}}{{ "{%" }} endblock {{ "%}" }}
+
+{{ "{%" }} block body_container {{ "%}" }}
+  <div class="jumbotron">
+    <div class="container">
+      <h1 class="smaller">Welcome to {{cookiecutter.project_name}}</h1>
+      <p>
+        {{cookiecutter.project_short_description}}
+      </p>
+    </div>
+  </div>
+  <hr>
+  <footer>
+    <p>© {{cookiecutter.full_name}} {{cookiecutter.year}}</p>
+  </footer>
+{{ "{%" }} endblock {{ "%}" }}
