@@ -1,9 +1,9 @@
 ======================
-cookiecutter-pypackage
+cookiecutter-django-jw
 ======================
 
-Cookiecutter template for a Python package.
-See https://github.com/jwhitlock/cookiecutter-pypackage.git
+Cookiecutter template for a Python package or project
+See https://github.com/jwhitlock/cookiecutter-django-jw.git
 
 * Free software: Mozilla Public License Version 2.0
 * Vanilla testing setup with `unittest` and `python setup.py test`
@@ -14,7 +14,7 @@ See https://github.com/jwhitlock/cookiecutter-pypackage.git
   against Django 1.6 and 1.7
 * Sphinx_ docs: Documentation ready for generation with, for example,
   ReadTheDocs_
-* Quick quality check with `make qa`, 100% coverage and clean PEP8/PE257
+* Quick quality check with `make qa`, 100% coverage and clean PEP8/PEP257
 * Release QA check with `make qa-all`, with clean packaging
   
 
@@ -23,7 +23,7 @@ Usage
 
 Generate a Python package project::
 
-    cookiecutter https://github.com/jwhitlock/cookiecutter-pypackage.git
+    cookiecutter https://github.com/jwhitlock/cookiecutter-django-jw.git
 
 Then:
 
@@ -51,7 +51,8 @@ Similar Cookiecutter Templates
   test runner, ``_compat`` module and module/doc conventions. See ``README.rst`` or
   the `github comparison view`_ for exhaustive list of additions and modifications.
 
-* Also see the `network`_ and `family tree`_ for audreyr's repo.
+* Also see the `network`_ and `family tree`_ for audreyr's repo, and many
+  projects linked from the cookiecutter_ repo.
 
 
 .. _Travis-CI: http://travis-ci.org/
@@ -64,3 +65,4 @@ Similar Cookiecutter Templates
 .. _github comparison view: https://github.com/tony/cookiecutter-pypackage/compare/audreyr:master...master
 .. _`network`: https://github.com/audreyr/cookiecutter-pypackage/network
 .. _`family tree`: https://github.com/audreyr/cookiecutter-pypackage/network/members
+.. _`cookiecutter`: https://github.com/audreyr/cookiecutter

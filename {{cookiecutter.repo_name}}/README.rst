@@ -36,6 +36,7 @@
 
 * Free software: Mozilla Public License Version 2.0
 * Documentation: https://{{ cookiecutter.repo_name }}.readthedocs.org
+* Generated from: https://github.com/jwhitlock/cookiecutter-django-jw.git
 
 Features
 --------
