@@ -11,7 +11,8 @@ include app.json
 include manage.py
 include requirements.txt
 
-recursive-include docs Makefile conf.py *.rst make.bat *.keep
+recursive-include docs Makefile conf.py *.rst make.bat .keep
+recursive-include static .keep
 recursive-include {{ cookiecutter.app_name }} *.py
 recursive-include {{ cookiecutter.app_name }}/static *.css *.map *.eot *.svg *.ttf *.woff *.js .keep
 recursive-include {{ cookiecutter.app_name }}/templates *.jinja2
