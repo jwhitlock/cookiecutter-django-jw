@@ -70,7 +70,9 @@ for local development.
 
     $ mkvirtualenv {{ cookiecutter.repo_name }}
     $ cd {{ cookiecutter.repo_name }}/
-    $ python setup.py develop
+    $ pip install -r requirements.txt
+    $ ./manage.py syncdb
+    $ export DEBUG=1
 
 4. Create a branch for local development::
 
@@ -111,4 +113,13 @@ Tips
 
 To run a subset of tests::
 
-    $ python -m unittest tests.test_{{ cookiecutter.repo_name }}
+    $ ./manage.py test {{ cookiecutter.app_name }}/tests/test_views.py
+
+To mark failed tests::
+
+    $ ./manage.py test --failed
+
+To re-run only the failed tests:
+
+    $ ./manage.py test --failed
+

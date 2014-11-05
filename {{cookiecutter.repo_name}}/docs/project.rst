@@ -70,7 +70,7 @@ to match your desired configuration.
 
 In development, some ways to set the environment are:
 
-* On the command line: ``DEBUG-1 ./manage.py runserver``
+* On the command line: ``DEBUG=1 ./manage.py runserver``
 * Export settings: ``export DEBUG=1; ./manage.py runserver``
 * As part of virtualenv initialization: ``vim $VIRTUAL_ENV/bin/postactivate``
   for the ``export DEBUG=1`` set statements, and
@@ -84,34 +84,24 @@ button, or manually:
 .. code-block:: sh
 
     $ heroku apps:create {{ cookiecutter.repo_name }}
+
+Then config for development:
+
+.. code-block:: sh
+
+    $ heroku config:set EXTRA_INSTALLED_APPS=gunicorn STATIC_ROOT=static DEBUG=1
+
+Or for production:
+
+.. code-block:: sh
+
+    $ heroku config:set EXTRA_INSTALLED_APPS=gunicorn STATIC_ROOT=static DEBUG=0 ALLOWED_HOSTS={{ cookiecutter.repo_name }}.herokuapp.com SECURE_PROXY_SSL_HEADER=HTTP_X_FORWARDED_PROTOCOL,https
+
+When you've got the app configured, deploy your code to run it:
+
+.. code-block:: sh
+
     $ git push heroku master
-
-The minimum config for running in heroku is:
-
-.. code-block:: sh
-
-    $ heroku config:set EXTRA_INSTALLED_APPS=gunicorn STATIC_ROOT=static
-
-
-For development, you'll want to enable debug:
-
-.. code-block:: sh
-
-    $ heroku config:set DEBUG=1
-
-For release, more is useful:
-
-.. code-block:: sh
-
-    $ heroku config:set DEBUG=0
-    $ heroku config:set EXTRA_INSTALLED_APPS=gunicorn
-    $ heroku config:set ALLOWED_HOSTS={{ cookiecutter.repo_name }}.herokuapp.com
-    $ heroku config:set SECURE_PROXY_SSL_HEADER=HTTP_X_FORWARDED_PROTOCOL,https
-
-When you've got the app configured, you can open it in the browser with:
-
-.. code-block:: sh
-
     $ heroku open
 
 .. _12factor: http://12factor.net
