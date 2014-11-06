@@ -19,7 +19,7 @@
     :alt: The PyPI package
     :target: http://badge.fury.io/py/{{cookiecutter.repo_name}}
 
-.. image:: https://pypip.in/d/{{cookiecutter.repo_name}}/badge.png
+.. image:: https://pypip.in/download/{{cookiecutter.repo_name}}/badge.png
     :height: 22px
     :alt: PyPI download statistics
     :target: https://pypi.python.org/pypi/{{cookiecutter.repo_name}}
