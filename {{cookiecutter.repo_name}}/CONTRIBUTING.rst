@@ -36,7 +36,7 @@ is open to whoever wants to implement it.
 Write Documentation
 ~~~~~~~~~~~~~~~~~~~
 
-{{ cookiecutter.project_name }} could always use more documentation, whether as
+{{ cookiecutter.repo_name }} could always use more documentation, whether as
 part of the official {{ cookiecutter.project_name }} docs, in docstrings, or
 even on the web in blog posts, articles, and such.
 
@@ -56,7 +56,7 @@ If you are proposing a feature:
 Get Started!
 ------------
 
-Ready to contribute? Here's how to set up `{{ cookiecutter.repo_name }}`
+Ready to contribute? Here's how to set up {{ cookiecutter.repo_name }}
 for local development.
 
 1. Fork the `{{ cookiecutter.repo_name }}` repo on GitHub.
@@ -119,7 +119,7 @@ To mark failed tests::
 
     $ ./manage.py test --failed
 
-To re-run only the failed tests:
+To re-run only the failed tests::
 
     $ ./manage.py test --failed
 
