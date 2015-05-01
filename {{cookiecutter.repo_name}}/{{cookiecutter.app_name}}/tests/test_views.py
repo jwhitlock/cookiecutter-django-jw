@@ -15,4 +15,3 @@ class TestHome(TestCase):
             'Welcome to {{cookiecutter.project_name}}'
             '</h1>')
         self.assertContains(response, expected_html, html=True)
-

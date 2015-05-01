@@ -13,4 +13,3 @@ os.environ.setdefault("DJANGO_SETTINGS_MODULE", "{{ cookiecutter.site_name }}.se
 from django.core.wsgi import get_wsgi_application
 from dj_static import Cling
 application = Cling(get_wsgi_application())
-

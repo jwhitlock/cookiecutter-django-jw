@@ -9,7 +9,9 @@ try:
 except ImportError:
     from distutils.core import setup
 
+
 def get_long_description(title):
+    """Create the long_description from other files."""
     readme = open('README.rst').read()
     history = open('HISTORY.rst').read()
 
@@ -44,7 +46,7 @@ test_requirements = [
 setup(
     name='{{ cookiecutter.repo_name }}',
     version=version,
-    description='{{ cookiecutter.project_short_description }}',
+    description='{{ cookiecutter.project_short_description }}',  # flake8: noqa
     long_description=get_long_description('{{ cookiecutter.project_short_description }}'),
     author='{{ cookiecutter.full_name }}',
     author_email='{{ cookiecutter.email }}',
