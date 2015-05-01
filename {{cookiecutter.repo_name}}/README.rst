@@ -12,6 +12,11 @@
     :alt: The code coverage
     :target: https://coveralls.io/r/{{cookiecutter.github_username}}/{{cookiecutter.repo_name}}?branch=master
 
+.. image:: https://requires.io/github/{{cookiecutter.github_username}}/{{cookiecutter.repo_name}}/requirements.svg?branch=master
+    :height: 22px
+     :target: https://requires.io/github/{{cookiecutter.github_username}}/{{cookiecutter.repo_name}}/requirements/?branch=master
+     :alt: Requirements Status
+
 .. image:: https://badge.fury.io/py/{{cookiecutter.repo_name}}.png
     :height: 22px
     :alt: The PyPI package

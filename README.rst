@@ -10,6 +10,7 @@ See https://github.com/jwhitlock/cookiecutter-django-jw.git
 * Skeleton Django project to support `./manage.py`
 * Jinja2 / jingo with Bootstrap 3 for templates
 * Travis-CI_: Ready for Travis Continuous Integration testing
+* requires.io_: Track your 3rd-party packages https://requires.io
 * Tox_ testing: Setup to easily test for Python 2.6, 2.7, 3.3, 3.4
   against Django 1.6 and 1.7
 * Sphinx_ docs: Documentation ready for generation with, for example,
@@ -31,6 +32,7 @@ Then:
 * Add the repo to your Travis CI account.
 * Add the repo to your ReadTheDocs account + turn on the ReadTheDocs service
   hook.
+* Add the repo to your requires.io account.
 * Release your package the standard Python way. Here's a release checklist:
   https://gist.github.com/audreyr/5990987
 
@@ -66,3 +68,4 @@ Similar Cookiecutter Templates
 .. _`network`: https://github.com/audreyr/cookiecutter-pypackage/network
 .. _`family tree`: https://github.com/audreyr/cookiecutter-pypackage/network/members
 .. _`cookiecutter`: https://github.com/audreyr/cookiecutter
+.. _`requires.io`: https://requires.io
