@@ -9,9 +9,26 @@ try:
 except ImportError:
     from distutils.core import setup
 
+def get_long_description(title):
+    readme = open('README.rst').read()
+    history = open('HISTORY.rst').read()
 
-readme = open('README.rst').read()
-history = open('HISTORY.rst').read().replace('.. :changelog:', '')
+    body_tag = ".. Omit badges from docs"
+    readme_body_start = readme.index(body_tag)
+    assert readme_body_start
+    readme_body = readme[readme_body_start + len(body_tag):]
+
+    history_body = history.replace('.. :changelog:', '')
+    bars = '=' * len(title)
+    long_description = """
+%(bars)s
+%(title)s
+%(bars)s
+%(readme_body)s
+
+%(history_body)s
+""" % locals()
+    return long_description
 
 requirements = [
     'Django>=1.6',
@@ -28,7 +45,7 @@ setup(
     name='{{ cookiecutter.repo_name }}',
     version=version,
     description='{{ cookiecutter.project_short_description }}',
-    long_description=readme + '\n\n' + history,
+    long_description=get_long_description('{{ cookiecutter.project_short_description }}'),
     author='{{ cookiecutter.full_name }}',
     author_email='{{ cookiecutter.email }}',
     url='https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.repo_name }}',

@@ -2,8 +2,6 @@
 {{ cookiecutter.project_name }}
 {% for c in cookiecutter.project_name %}={% endfor %}
 
-.. This causes warnings from Sphinx due to external images, but the GitHub parser ignores raw HTML
-
 .. image:: https://travis-ci.org/{{cookiecutter.github_username}}/{{cookiecutter.repo_name}}.png?branch=master
     :height: 22px
     :alt: The status of Travis continuous integration tests
@@ -28,6 +26,8 @@
     :height: 35px
     :alt: Deploy to Heroku
     :target: https://heroku.com/deploy?template=https://github.com/{{cookiecutter.github_username}}/{{cookiecutter.repo_name}}
+
+.. Omit badges from docs
 
 {{ cookiecutter.project_short_description }}
 
