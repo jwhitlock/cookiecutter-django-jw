@@ -17,6 +17,7 @@ See https://github.com/jwhitlock/cookiecutter-django-jw.git
   ReadTheDocs_
 * Quick quality check with `make qa`, 100% coverage and clean PEP8/PEP257
 * Release QA check with `make qa-all`, with clean packaging
+* Deploy to Heroku_ with a button
   
 
 Usage
@@ -69,3 +70,4 @@ Similar Cookiecutter Templates
 .. _`family tree`: https://github.com/audreyr/cookiecutter-pypackage/network/members
 .. _`cookiecutter`: https://github.com/audreyr/cookiecutter
 .. _`requires.io`: https://requires.io
+.. _`Heroku`: https://www.heroku.com
