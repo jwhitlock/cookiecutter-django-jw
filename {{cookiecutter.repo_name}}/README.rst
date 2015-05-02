@@ -14,11 +14,12 @@
      :target: https://requires.io/github/{{cookiecutter.github_username}}/{{cookiecutter.repo_name}}/requirements/?branch=master
      :alt: Requirements Status
 
-.. image:: https://badge.fury.io/py/{{cookiecutter.repo_name}}.png
+.. Enable after deployment
+.. .. image:: https://badge.fury.io/py/{{cookiecutter.repo_name}}.png
     :alt: The PyPI package
     :target: http://badge.fury.io/py/{{cookiecutter.repo_name}}
 
-.. image:: https://pypip.in/download/{{cookiecutter.repo_name}}/badge.png
+.. .. image:: https://pypip.in/download/{{cookiecutter.repo_name}}/badge.png
     :alt: PyPI download statistics
     :target: https://pypi.python.org/pypi/{{cookiecutter.repo_name}}
 
