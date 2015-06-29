@@ -70,7 +70,7 @@ for local development.
 
     $ mkvirtualenv {{ cookiecutter.repo_name }}
     $ cd {{ cookiecutter.repo_name }}/
-    $ pip install -r requirements.txt
+    $ pip install -r requirements.txt -r requirements-dev.txt
     $ ./manage.py syncdb
     $ export DEBUG=1
 

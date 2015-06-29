@@ -7,7 +7,7 @@
     "app_name": "sample",
     "site_name": "sample_site",
     "project_short_description": "Sample Project created from cookiecutter-django-jw",
-    "release_date": "2015-05-01",
+    "release_date": "2015-06-29",
     "year": "2015",
     "version": "0.1.0"
 }

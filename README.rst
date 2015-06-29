@@ -11,8 +11,7 @@ See https://github.com/jwhitlock/cookiecutter-django-jw.git
 * Jinja2 / jingo with Bootstrap 3 for templates
 * Travis-CI_: Ready for Travis Continuous Integration testing
 * requires.io_: Track your 3rd-party packages https://requires.io
-* Tox_ testing: Setup to easily test for Python 2.6, 2.7, 3.3, 3.4
-  against Django 1.6 and 1.7
+* Tox_ testing: Setup to easily test for Python 2.7 and 3.4 against Django 1.8
 * Sphinx_ docs: Documentation ready for generation with, for example,
   ReadTheDocs_
 * Quick quality check with `make qa`, 100% coverage and clean PEP8/PEP257
